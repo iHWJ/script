@@ -1,0 +1,24 @@
+#!name=Picsew解锁专业版
+#!desc=Picsew解锁专业版
+#!openUrl=
+#!author=
+#!homepage=
+#!manual=
+#!icon=
+#!other=Picsew.Stash.stoverride
+
+name: Picsew解锁专业版
+desc: Picsew解锁专业版
+http:
+  mitm:
+    - 'buy.itunes.apple.com'
+  script:
+    - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+      name: Picsew
+      type: response
+      require-body: true
+      timeout: 10
+script-providers:
+  Picsew:
+    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
+    interval: 86400
