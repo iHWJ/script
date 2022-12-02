@@ -68,14 +68,14 @@ http:
       require-body: true
       timeout: 30
       max-size: 0
-    #  mimo
+    # mimo
     - match: ^https://api.getmimo.com/v1/subscriptions
       name: mimo.js
       type: response
       require-body: true
       timeout: 30
       max-size: 0
-    #  alarmy 
+    # alarmy 
     - match: ^https://ars.alar.my/api/v2/user/sync
       name: alarmy.js
       type: response
