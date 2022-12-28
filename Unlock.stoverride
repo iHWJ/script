@@ -1,0 +1,46 @@
+name: APP Unlock Collection
+desc: 美图秀秀、AdGuard、Picsew
+
+http:
+  mitm:
+    - "api.xiuxiu.meitu.com,h5.xiuxiu.meitu.com"
+    - "*.adguard.org"
+    - "buy.itunes.apple.com"
+
+  script:
+    # MeiTuXiuXiu
+    - match: ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/
+      name: MeiTuXiuXiu
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 0
+
+    # AdGuard
+    - match: ^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt
+      name: AdGuard
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 0
+
+    # Picsew
+    - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+      name: Picsew
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 0
+
+script-providers:
+  MeiTuXiuXiu:
+    url: https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/MeiTuXiuXiu.js
+    interval: 86400
+
+  AdGuard:
+    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/AdGuardProCrack.js
+    interval: 86400
+
+  Picsew:
+    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
+    interval: 86400
