@@ -3,7 +3,8 @@ desc: 美图秀秀、AdGuard、Picsew、CamScanner
 
 http:
   mitm:
-    - "api.xiuxiu.meitu.com,h5.xiuxiu.meitu.com"
+    - "api.xiuxiu.meitu.com"
+    - "h5.xiuxiu.meitu.com"
     - "*.adguard.org"
     - "buy.itunes.apple.com"
     - "*.intsig.net"
@@ -39,11 +40,11 @@ http:
       type: response
       require-body: true
       timeout: 30
-      max-size: 0	  
+      max-size: 0
 
 script-providers:
   MeiTuXiuXiu:
-    url: https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/MeiTuXiuXiu.js
+    url: https://raw.githubusercontent.com/98kevinxiao/javascript/main/meituxiuxiu.js
     interval: 86400
 
   AdGuard:
