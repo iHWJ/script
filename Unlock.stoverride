@@ -2,7 +2,7 @@ name: VIP Unlock Collection
 desc: 美图秀秀、AdGuard、Picsew、CamScanner、蛋波
 
 http:
-  
+
   mitm:
     - "api.xiuxiu.meitu.com"
     - "h5.xiuxiu.meitu.com"
@@ -13,7 +13,7 @@ http:
 
   script:
     # MeiTuXiuXiu
-    - match: ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/
+    - match: ^https:\/\/api\.xiuxiu\.meitu\.com\/v1
       name: MeiTuXiuXiu
       type: response
       require-body: true
@@ -53,9 +53,9 @@ http:
       max-size: 0
 
 script-providers:
-  
+
   MeiTuXiuXiu:
-    url: https://raw.githubusercontent.com/98kevinxiao/javascript/main/meituxiuxiu.js
+    url: https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mtxx.js
     interval: 86400
 
   AdGuard:
