@@ -1,0 +1,35 @@
+name: RW2Stash
+desc: QX/Surge重写转换为Stash
+
+#QX重写链接&"qx.stoverride"
+#Surge模块链接&"sg.stoverride"
+
+http:
+  script:
+    # Quantumult X
+    - match: qx.stoverride$
+      name: QX2Stash
+      type: request
+      require-body: true
+      timeout: 30
+      max-size: 0
+
+    # Surge
+    - match: sg.stoverride$
+      name: Surge2Stash
+      type: request
+      require-body: true
+      timeout: 30
+      max-size: 0
+
+  mitm:
+    - "github.com"
+    - "raw.githubusercontent.com"
+
+script-providers:
+  QX2Stash:
+    url: https://raw.githubusercontent.com/chengkongyiban/stash/main/js/QX_to_Stash.js
+    interval: 86400
+  Surge2Stash:
+    url: https://raw.githubusercontent.com/chengkongyiban/stash/main/js/Surge_to_Stash.js
+    interval: 86400
