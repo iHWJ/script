@@ -1,5 +1,5 @@
 name: VIP Unlock Collection
-desc: 美图秀秀、AdGuard、Picsew、CamScanner、蛋波
+desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、谜底时钟、XMind
 
 http:
 
@@ -10,9 +10,13 @@ http:
     - "buy.itunes.apple.com"
     - "*.intsig.net"
     - "api-sub.meitu.com"
+    - "api.revenuecat.com"
+    - "www.xmind.cn"
+    - "www.xmind.net"
+    - "www.xmind.app"
 
   script:
-    # MeiTuXiuXiu
+    # 美图秀秀
     - match: ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/
       name: MeiTuXiuXiu
       type: response
@@ -36,7 +40,7 @@ http:
       timeout: 30
       max-size: 0
 
-    # CamScanner
+    # 扫描全能王
     - match: ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?
       name: CamScanner
       type: response
@@ -44,12 +48,28 @@ http:
       timeout: 30
       max-size: 0
 
-    # MeiTuBaby
+    # 蛋波
     - match: ^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json
       name: MeiTuBaby
       type: response
       require-body: true
       timeout: 30
+      max-size: 0
+
+    # 谜底时钟
+    - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$
+      name: MiDiClock
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 3145728
+
+    # Xmind
+    - match: https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices
+      name: Xmind
+      type: response
+      require-body: true
+      timeout: 10
       max-size: 0
 
 script-providers:
@@ -72,4 +92,12 @@ script-providers:
 
   MeiTuBaby:
     url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/MeiTuBabyVipCrack.js
+    interval: 86400
+
+  MiDiClock:
+    url: https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mdsz.js
+    interval: 86400
+
+  Xmind:
+    url: https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Xmind/Script/Xmind.js
     interval: 86400
