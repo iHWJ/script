@@ -1,7 +1,7 @@
 name: Rewrite2Stash
-desc: 重写转换
+desc: 重写转换为Stash覆写
 
-#QX重写链接&"qx.stoverride"
+#Quantumult X重写链接&"qx.stoverride"
 #Surge模块链接&"sg.stoverride"
 
 http:
