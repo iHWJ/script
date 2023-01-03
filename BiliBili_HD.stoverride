@@ -1,0 +1,18 @@
+name: BiliBili_HD
+desc: 哔哩哔哩_1080P高码率+4K画质(番剧和影视除外)
+
+http:
+  script:
+    - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?
+      name: BiliBili
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 3145728
+  mitm:
+    - "app.bilibili.com"
+
+script-providers:
+  BiliBili:
+    url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/bilibili_json.js
+    interval: 86400
