@@ -1,5 +1,5 @@
 name: Rewrite2Stash
-desc: QX/Surge重写转换为Stash
+desc: 重写转换
 
 #QX重写链接&"qx.stoverride"
 #Surge模块链接&"sg.stoverride"
