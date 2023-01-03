@@ -30,6 +30,7 @@ script-providers:
   QX2Stash:
     url: https://raw.githubusercontent.com/chengkongyiban/stash/main/js/QX_to_Stash.js
     interval: 86400
+
   Surge2Stash:
     url: https://raw.githubusercontent.com/chengkongyiban/stash/main/js/Surge_to_Stash.js
     interval: 86400
