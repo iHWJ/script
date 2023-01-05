@@ -1,12 +1,3 @@
-#!name=SparkMail
-#!desc=SparkMail解锁永久订阅
-#!openUrl=
-#!author=
-#!homepage=
-#!manual=
-#!icon=
-#!other=SparkMail.Stash.stoverride
-
 name: SparkMail
 desc: SparkMail解锁永久订阅
 http:
