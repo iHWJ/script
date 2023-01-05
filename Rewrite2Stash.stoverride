@@ -1,14 +1,13 @@
 name: Rewrite2Stash
 desc: 重写转换为Stash覆写
 
-#Quantumult X重写链接&"qx.stoverride"
-#Surge模块链接&"sg.stoverride"
+#重写链接&"qx|sg.stoverride?n=name&d=desc"
 
 http:
   script:
     # Quantumult X
     - match: qx.stoverride$
-      name: QX2Stash
+      name: QuanX2Stash
       type: request
       require-body: true
       timeout: 30
@@ -27,7 +26,7 @@ http:
     - "raw.githubusercontent.com"
 
 script-providers:
-  QX2Stash:
+  QuanX2Stash:
     url: https://raw.githubusercontent.com/chengkongyiban/stash/main/js/QX_to_Stash.js
     interval: 86400
 
