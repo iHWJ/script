@@ -33,7 +33,7 @@ http:
   script:
     # 屏蔽首页右上活动
     - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity
-      name: bilibili_json
+      name: bilibili_json_01
       type: response
       timeout: 30
       require-body: true
@@ -41,7 +41,7 @@ http:
       
     # 观影页面去广告
     - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?
-      name: bilibili_json
+      name: bilibili_json_02
       type: response
       timeout: 30
       require-body: true
@@ -49,7 +49,7 @@ http:
       
     # 应用开屏广告预加载
     - match: ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list
-      name: bilibili_json
+      name: bilibili_json_03
       type: response
       timeout: 30
       require-body: true
@@ -57,7 +57,7 @@ http:
       
     # 1080P高码率+4K画质(番剧和影视除外)
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?
-      name: bilibili_json
+      name: bilibili_json_04
       type: response
       timeout: 30
       require-body: true
@@ -65,7 +65,7 @@ http:
       
     # 热搜发现
     - match: ^https://app.bilibili.com/x/v2/search/square
-      name: bilibili_json
+      name: bilibili_json_05
       type: response
       timeout: 30
       require-body: true
@@ -73,7 +73,7 @@ http:
       
     # 推荐去广告
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index
-      name: bilibili_json
+      name: bilibili_json_06
       type: response
       timeout: 30
       require-body: true
@@ -81,7 +81,7 @@ http:
       
     # 追番去广告
     - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi
-      name: bilibili_json
+      name: bilibili_json_07
       type: response
       timeout: 30
       require-body: true
@@ -89,7 +89,7 @@ http:
       
     # 直播去广告
     - match: ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom
-      name: bilibili_json
+      name: bilibili_json_08
       type: response
       timeout: 30
       require-body: true
@@ -97,7 +97,7 @@ http:
       
     # 标签页处理
     - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab
-      name: bilibili_json
+      name: bilibili_json_09
       type: response
       timeout: 30
       require-body: true
@@ -105,7 +105,7 @@ http:
       
     # 我的页面处理
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine
-      name: bilibili_json
+      name: bilibili_json_10
       type: response
       timeout: 30
       require-body: true
@@ -138,7 +138,7 @@ http:
 
     # 去除统一设置的皮肤
 #    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?
-#      name: bilibili_json
+#      name: bilibili_json_11
 #      type: response
 #      timeout: 30
 #      require-body: true
@@ -157,9 +157,49 @@ http:
     - "-*tracker*.biliapi.net"
 
 script-providers:
-  bilibili_json:
+  bilibili_json_01:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
+	
+  bilibili_json_02:
+    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+    interval: 86400
+	
+  bilibili_json_03:
+    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+    interval: 86400
+	
+  bilibili_json_04:
+    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+    interval: 86400
+	
+  bilibili_json_05:
+    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+    interval: 86400
+	
+  bilibili_json_06:
+    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+    interval: 86400
+	
+  bilibili_json_07:
+    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+    interval: 86400
+	
+  bilibili_json_08:
+    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+    interval: 86400
+	
+  bilibili_json_09:
+    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+    interval: 86400
+	
+  bilibili_json_10:
+    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+    interval: 86400
+	
+#  bilibili_json_11:
+#    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
+#    interval: 86400
 	
   bilibili_proto:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js
