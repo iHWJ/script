@@ -1,12 +1,12 @@
 name: Rewrite2Stash
 desc: 重写转换为Stash覆写
 
-#重写链接&"qx|sg.stoverride?n=name&d=desc"
+#重写链接&"qx|sg.stoverride?n=name+desc&x=添加注释&y=取消注释"
 
 http:
   script:
     # Quantumult X
-    - match: qx.stoverride$
+    - match: qx.stoverride\?.*|qx.stoverride$
       name: QuanX2Stash
       type: request
       require-body: true
@@ -14,7 +14,7 @@ http:
       max-size: 0
 
     # Surge
-    - match: sg.stoverride$
+    - match: sg.stoverride\?.*|sg.stoverride$
       name: Surge2Stash
       type: request
       require-body: true
