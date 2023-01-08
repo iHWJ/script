@@ -58,7 +58,7 @@ http:
 
     # 谜底时钟
     - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$
-      name: MiDiClock
+      name: MidiClock
       type: response
       require-body: true
       timeout: 30
@@ -94,7 +94,7 @@ script-providers:
     url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/MeiTuBabyVipCrack.js
     interval: 86400
 
-  MiDiClock:
+  MidiClock:
     url: https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mdsz.js
     interval: 86400
 
