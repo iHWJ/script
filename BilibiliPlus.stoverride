@@ -1,5 +1,5 @@
-name: Bilibili AdBlock Plus
-desc: Bilibili去广告增强版
+name: BiliBili AdBlock Plus
+desc: BiliBili去广告增强版
 
 http:
   rewrite:
@@ -119,6 +119,7 @@ http:
       require-body: true
       max-size: 3145728
       binary-mode: true
+      
     # 启动时开启直连模式[自行启用]
 #    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain
 #      name: bilibili_startup_direct
@@ -126,6 +127,7 @@ http:
 #      timeout: 30
 #      require-body: true
 #      max-size: 3145728
+
     # 繁体CC字幕转中文简体[自行启用]
 #    - match: ^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$
 #      name: bilibili_cc
@@ -133,6 +135,7 @@ http:
 #      timeout: 30
 #      require-body: true
 #      max-size: 3145728
+
     # 去除统一设置的皮肤
 #    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?
 #      name: bilibili_json
