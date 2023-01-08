@@ -119,7 +119,6 @@ http:
       require-body: true
       max-size: 3145728
       binary-mode: true
-	  
     # 启动时开启直连模式[自行启用]
 #    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain
 #      name: bilibili_startup_direct
@@ -127,7 +126,6 @@ http:
 #      timeout: 30
 #      require-body: true
 #      max-size: 3145728
-
     # 繁体CC字幕转中文简体[自行启用]
 #    - match: ^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$
 #      name: bilibili_cc
@@ -135,7 +133,6 @@ http:
 #      timeout: 30
 #      require-body: true
 #      max-size: 3145728
-
     # 去除统一设置的皮肤
 #    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?
 #      name: bilibili_json_11
@@ -160,55 +157,42 @@ script-providers:
   bilibili_json_01:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
   bilibili_json_02:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
   bilibili_json_03:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
   bilibili_json_04:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
   bilibili_json_05:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
   bilibili_json_06:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
   bilibili_json_07:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
   bilibili_json_08:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
   bilibili_json_09:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
   bilibili_json_10:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
     interval: 86400
-	
-#  bilibili_json_11:
-#    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
-#    interval: 86400
-	
   bilibili_proto:
     url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_proto.js
     interval: 86400
-	
 #  bilibili_startup_direct:
 #    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_startup_direct.js
 #    interval: 86400
-
 #  bilibili_cc:
 #    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_cc.js
+#    interval: 86400
+#  bilibili_json_11:
+#    url: https://github.com/ddgksf2013/Scripts/raw/master/bilibili_json.js
 #    interval: 86400
