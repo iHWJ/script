@@ -1,0 +1,21 @@
+name: ClarityPaperPro
+desc: 克拉壁纸解锁订阅
+
+http:
+
+  script:
+    # > 克拉壁纸解锁订阅
+    - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+      name: ClarityPaperPro
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+
+  mitm:
+    - "buy.itunes.apple.com"
+
+script-providers:
+  ClarityPaperPro:
+    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/ClarityPaperProCrack.js_script-converter-stash.js
+    interval: 86400
