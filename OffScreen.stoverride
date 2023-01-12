@@ -1,0 +1,19 @@
+desc: OffScreen解锁
+http:
+
+  script:
+    # OffScreen
+    - match: https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
+      name: OffScreen
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 0
+
+  mitm:
+    - "api.revenuecat.com"
+
+script-providers:
+  OffScreen:
+    url: https://raw.githubusercontent.com/ddgksf2013/dev/main/OffScreenProCrack.js
+    interval: 86400
