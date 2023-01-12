@@ -1,4 +1,6 @@
+name: OffScreen
 desc: OffScreen解锁
+
 http:
 
   script:
