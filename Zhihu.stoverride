@@ -35,91 +35,91 @@ http:
   script:
     # 知乎处理用户信息
     - match: ^https?:\/\/api\.zhihu\.com\/people\/
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎信息流去广告
     - match: ^https?:\/\/api\.zhihu\.com\/(moments|topstory)(\/|\?)?(recommend|action=|feed_type=)(?!\/people)
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎回答列表去广告
     - match: ^https?:\/\/api\.zhihu\.com\/(v4\/)?questions\/\d+
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎获取黑名单
     - match: ^https?:\/\/api\.zhihu\.com\/settings\/blocked_users
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎官方消息去广告
     - match: ^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message|timeline\/entry\/system_message)
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎预置关键词去广告
     - match: ^https?:\/\/api\.zhihu\.com\/search\/preset_words\?
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 优化软件配置
     - match: ^https?:\/\/appcloud2\.zhihu\.com\/v\d+\/config
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎热搜去广告
     - match: ^https?:\/\/api\.zhihu\.com\/search\/top_search\/tabs\/hot\/items
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎热榜去广告
     - match: ^https?:\/\/api\.zhihu\.com\/topstory\/hot-lists?(\?|\/)
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎评论去广告
     - match: ^https?:\/\/api\.zhihu\.com\/(comment_v5\/)?(answers|comments?|articles|pins)\/\d+\/(root_|child_)?comments?
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎回答列表去广告
     - match: ^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/.*(entry=(?!(preload-topstory|preload-search|preload-subscription)))?
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎屏蔽关键词解锁
     - match: ^https?:\/\/api\.zhihu\.com\/feed-root\/block
-      name: zhihu
+      name: Zhihu
       type: request
       timeout: 30
       require-body: true
       max-size: 3145728
     # 知乎8.3.0移除推荐页顶部项
     - match: ^https?:\/\/api\.zhihu\.com\/feed-root\/sections\/query\/v2
-      name: zhihu
+      name: Zhihu
       type: response
       timeout: 30
       require-body: true
@@ -136,6 +136,6 @@ http:
     - "103.41.167.226"
 
 script-providers:
-  zhihu:
+  Zhihu:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu.js
     interval: 86400
