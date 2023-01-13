@@ -5,30 +5,22 @@ http:
   rewrite:
     # 屏蔽直播间商品广告浮窗
     - ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? - reject-dict
-
     # 屏蔽广告浮窗
     - ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive - reject-dict
-
     # 屏蔽IP请求
     - ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
-
     # 屏蔽DefaultWord
     - ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default - reject
-
     # 应用开屏去广告
     - ^https://app.bilibili.com/x/v2/splash/show - reject-dict
-
     # Defaultword
     - ^https://app.bilibili.com/x/v2/search/defaultwords - reject-dict
-
     # Material_Ad
     - ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report - reject-dict
-
     # 小卡片广告
     - ^https://api.bilibili.com/pgc/season/player/cards - reject-dict
-
     # 漫画去广告
-    - ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) - reject-dict
+    - ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) - reject-dict
 
   script:
     # 屏蔽首页右上活动
@@ -38,7 +30,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # 观影页面去广告
     - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?
       name: BiliBili_Json
@@ -46,7 +37,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # 应用开屏广告预加载
     - match: ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list
       name: BiliBili_Json
@@ -54,7 +44,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # 1080P高码率+4K画质(番剧和影视除外)
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?
       name: BiliBili_Json
@@ -62,7 +51,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # 热搜发现
     - match: ^https://app.bilibili.com/x/v2/search/square
       name: BiliBili_Json
@@ -70,7 +58,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # 推荐去广告
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index
       name: BiliBili_Json
@@ -78,7 +65,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # 追番去广告
     - match: ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi
       name: BiliBili_Json
@@ -86,7 +72,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # 直播去广告
     - match: ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom
       name: BiliBili_Json
@@ -94,7 +79,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # 标签页处理
     - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab
       name: BiliBili_Json
@@ -102,7 +86,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # 我的页面处理
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine
       name: BiliBili_Json
@@ -110,7 +93,6 @@ http:
       timeout: 30
       require-body: true
       max-size: 3145728
-      
     # Proto去广告
     - match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$
       name: BiliBili_Proto
@@ -119,7 +101,6 @@ http:
       require-body: true
       max-size: 3145728
       binary-mode: true
-      
     # 启动时开启直连模式[自行启用]
 #    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain
 #      name: BiliBili_Startup_Direct
@@ -127,7 +108,6 @@ http:
 #      timeout: 30
 #      require-body: true
 #      max-size: 3145728
-
     # 繁体CC字幕转中文简体[自行启用]
 #    - match: ^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$
 #      name: BiliBili_CC
@@ -135,7 +115,6 @@ http:
 #      timeout: 30
 #      require-body: true
 #      max-size: 3145728
-
     # 去除统一设置的皮肤
 #    - match: ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?
 #      name: BiliBili_Json
