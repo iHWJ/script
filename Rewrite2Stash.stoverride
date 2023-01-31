@@ -24,6 +24,7 @@ http:
   mitm:
     - "github.com"
     - "raw.githubusercontent.com"
+    - "gist.githubusercontent.com"
 
 script-providers:
   QuanX2Stash:
