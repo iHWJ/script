@@ -63,14 +63,14 @@ http:
       type: response
       require-body: true
       timeout: 30
-      max-size: 3145728
+      max-size: 0
 
     # Xmind
     - match: https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices
       name: Xmind
       type: response
       require-body: true
-      timeout: 10
+      timeout: 30
       max-size: 0
 
     # 百度网盘
@@ -78,7 +78,7 @@ http:
       name: BaiduCloud
       type: response
       require-body: true
-      timeout: 10
+      timeout: 30
       max-size: 0
 
 script-providers:
