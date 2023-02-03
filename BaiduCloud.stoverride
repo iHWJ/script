@@ -1,0 +1,17 @@
+name: 百度网盘
+desc: 解锁SVIP播放
+
+http:
+  mitm:
+    - "pan.baidu.com"
+  script:
+    - match: ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user
+      name: BaiduCloud
+      type: response
+      require-body: true
+      timeout: 10
+
+script-providers:
+  BaiduCloud:
+    url: https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/BaiduCloud.js
+    interval: 86400
