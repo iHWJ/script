@@ -1,5 +1,5 @@
 name: VIP Unlock Collection
-desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、谜底时钟、XMind
+desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、谜底时钟、XMind、百度网盘
 
 http:
 
@@ -14,6 +14,7 @@ http:
     - "www.xmind.cn"
     - "www.xmind.net"
     - "www.xmind.app"
+    - "pan.baidu.com"
 
   script:
     # 美图秀秀
@@ -72,6 +73,14 @@ http:
       timeout: 10
       max-size: 0
 
+    # BaiduCloud
+    - match: ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user
+      name: BaiduCloud
+      type: response
+      require-body: true
+      timeout: 10
+      max-size: 0
+
 script-providers:
 
   MeiTuXiuXiu:
@@ -100,4 +109,8 @@ script-providers:
 
   Xmind:
     url: https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Xmind/Script/Xmind.js
+    interval: 86400
+
+  BaiduCloud:
+    url: https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/BaiduCloud.js
     interval: 86400
