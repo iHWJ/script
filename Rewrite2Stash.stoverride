@@ -5,9 +5,7 @@ desc: 重写转换、规则集解析
 #规则集链接&"r_parser.list"
 
 http:
-
   script:
-
     # Quantumult X
     - match: qx.stoverride\?.*|qx.stoverride$
       name: QuanX
@@ -39,7 +37,6 @@ http:
     - "gitlab.com"
 
 script-providers:
-
   QuanX:
     url: https://github.com/chengkongyiban/stash/raw/main/js/QX_Rewrite_Parser.js
     interval: 86400
