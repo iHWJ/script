@@ -1,13 +1,15 @@
 name: Rewrite2Stash
-desc: 重写转换为Stash覆写
+desc: 重写转换、规则集解析
 
-#重写链接&"qx|sg.stoverride?n=name+desc&x=添加注释&y=取消注释"
+#重写链接&"qx|sg.stoverride?n=name+desc&x=添加注释&y=取消注释&del="
+#规则集链接&"r_parser.list"
+
 
 http:
   script:
     # Quantumult X
     - match: qx.stoverride\?.*|qx.stoverride$
-      name: QuanX2Stash
+      name: QuanX
       type: request
       require-body: true
       timeout: 30
@@ -15,7 +17,15 @@ http:
 
     # Surge
     - match: sg.stoverride\?.*|sg.stoverride$
-      name: Surge2Stash
+      name: Surge
+      type: request
+      require-body: true
+      timeout: 30
+      max-size: 0
+	  
+    # Rule
+    - match: r_parser.list$|r_parser.list\?.*
+      name: Rule
       type: request
       require-body: true
       timeout: 30
@@ -25,12 +35,17 @@ http:
     - "github.com"
     - "raw.githubusercontent.com"
     - "gist.githubusercontent.com"
+    - "gitlab.com"
 
 script-providers:
-  QuanX2Stash:
-    url: https://raw.githubusercontent.com/chengkongyiban/stash/main/js/QX_to_Stash.js
+  QuanX:
+    url: https://github.com/chengkongyiban/stash/raw/main/js/QX_Rewrite_Parser.js
     interval: 86400
 
-  Surge2Stash:
-    url: https://raw.githubusercontent.com/chengkongyiban/stash/main/js/Surge_to_Stash.js
+  Surge:
+    url: https://github.com/chengkongyiban/stash/raw/main/js/Surge_Rewrite_Parser.js
+    interval: 86400
+
+  Rule:
+    url: https://github.com/chengkongyiban/stash/raw/main/js/rule_parser.js
     interval: 86400
