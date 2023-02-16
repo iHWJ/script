@@ -1,0 +1,32 @@
+name: StormSniffer
+desc: 
+
+http:
+  script:
+    # StormSnifferHeader
+    - match: ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/.+$
+      name: StormSnifferHeader
+      type: request
+      timeout: 30
+      require-body: true
+      max-size: 0
+
+    # StormSnifferCrack
+    - match: ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/((user-profile\/)|(auth-device\/list\/))$
+      name: StormSnifferCrack
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 0
+
+  mitm:
+    - "*.x-storm.com"
+
+script-providers:
+  StormSnifferHeader:
+    url: https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferHeader.js
+    interval: 86400
+
+  StormSnifferCrack:
+    url: https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferCrack.js
+    interval: 86400
