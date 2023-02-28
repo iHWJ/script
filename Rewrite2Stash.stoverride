@@ -1,8 +1,10 @@
 name: Rewrite2Stash
-desc: 重写转换、规则集解析
+desc: 重写、规则、脚本解析转换
 
-#重写链接&"qx|sg.stoverride?n=name+desc&x=添加注释&y=取消注释&del="
-#规则集链接&"r_parser.list"
+#重写链接&"qx|sg.stoverride?n=name+desc"
+#规则链接&"r_parser.list"
+#脚本链接&"_script-converter-(stash|surge|loon|shadowrocket).js"
+
 
 http:
   script:
@@ -30,6 +32,14 @@ http:
       timeout: 30
       max-size: 0
 
+    # Scrip
+    - match: _script-converter-(stash|surge|loon|shadowrocket)\.js$
+      name: Scrip
+      type: request
+      require-body: true
+      timeout: 30
+      max-size: 0
+
   mitm:
     - "github.com"
     - "raw.githubusercontent.com"
@@ -47,4 +57,8 @@ script-providers:
 
   Rule:
     url: https://github.com/chengkongyiban/stash/raw/main/js/rule_parser.js
+    interval: 86400
+
+  Scrip:
+    url: https://github.com/xream/scripts/raw/main/surge/modules/script-converter/script-converter.js
     interval: 86400
