@@ -10,6 +10,7 @@ http:
     - "buy.itunes.apple.com"
     - "*.intsig.net"
     - "api-sub.meitu.com"
+    - "api.revenuecat.com"
     - "www.xmind.cn"
     - "www.xmind.net"
     - "www.xmind.app"
