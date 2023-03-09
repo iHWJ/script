@@ -65,7 +65,7 @@ http:
       type: response
       require-body: true
       timeout: 30
-      max-size: 0
+      max-size: 3145728
 
     # Xmind
     - match: https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices
@@ -123,7 +123,7 @@ script-providers:
     interval: 86400
 
   MidiClock:
-    url: https://raw.githubusercontent.com/ddgksf2013/MoYu/master/MDClockProCrack.js_script-converter-stash.js
+    url: https://raw.githubusercontent.com/ddgksf2013/MoYu/master/MDClockProCrack.js
     interval: 86400
 
   Xmind:
