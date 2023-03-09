@@ -13,7 +13,7 @@ http:
       require-body: true
       timeout: 30
       max-size: 0
-      
+
 script-providers:
   KuWoMusic:
     url: https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js
