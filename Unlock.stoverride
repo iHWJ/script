@@ -15,7 +15,7 @@ http:
     - "www.xmind.net"
     - "www.xmind.app"
     - "pan.baidu.com"
-    - "*.kuwo.cn,"
+    - "*.kuwo.cn"
     - "*.lrts.me"
 
   script:
