@@ -1,5 +1,5 @@
 name: VIP Unlock Collection
-desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、谜底时钟、XMind、百度网盘、酷我音乐
+desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、谜底时钟、XMind、百度网盘、酷我音乐、Grow
 
 http:
 
@@ -91,6 +91,14 @@ http:
       timeout: 30
       max-size: 0
 
+    # Grow
+    - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$
+      name: Grow
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 0
+
 
 script-providers:
 
@@ -128,4 +136,8 @@ script-providers:
 
   KuWoMusic:
     url: https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js
+    interval: 86400
+
+  Grow:
+    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrowForeverVipCrack.js
     interval: 86400
