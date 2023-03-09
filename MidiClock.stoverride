@@ -1,0 +1,19 @@
+name: MidiClock
+desc: 解锁专业版
+
+http:
+  mitm:
+    - "buy.itunes.apple.com"
+
+  script:
+    - match: ^https?:\/\/buy\.itunes\.apple\.com\/\w{13}$
+      name: MidiClock
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 0
+
+script-providers:
+  MidiClock:
+    url: https://raw.githubusercontent.com/ddgksf2013/MoYu/master/MDClockProCrack.js
+    interval: 86400
