@@ -1,20 +1,19 @@
 name: Grow
-desc: Grow解锁永久会员
+desc: 解锁永久会员
+
 http:
-
-  script:
-    # Grow
-    - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$
-      name: Grow
-      type: response
-      timeout: 30
-      require-body: true
-      max-size: 3145728
-
   mitm:
     - "api.revenuecat.com"
 
+  script:
+    - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$
+      name: Grow
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 0
+
 script-providers:
   Grow:
-    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrowForeverVipCrack.js_script-converter-stash.js
+    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/GrowForeverVipCrack.js
     interval: 86400
