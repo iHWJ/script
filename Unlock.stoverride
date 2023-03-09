@@ -36,12 +36,12 @@ http:
       max-size: 0
 
     # Picsew
-    - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
-      name: Picsew
-      type: response
-      require-body: true
-      timeout: 30
-      max-size: 0
+#    - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
+#      name: Picsew
+#      type: response
+#      require-body: true
+#      timeout: 30
+#      max-size: 0
 
     # 扫描全能王
     - match: ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?
@@ -110,9 +110,9 @@ script-providers:
     url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/AdGuardProCrack.js
     interval: 86400
 
-  Picsew:
-    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
-    interval: 86400
+#  Picsew:
+#    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
+#    interval: 86400
 
   CamScanner:
     url: https://raw.githubusercontent.com/id77/QuantumultX/master/Script/camscanner.js
