@@ -2,15 +2,16 @@ name: BiliBili HD
 desc: 哔哩哔哩_1080P高码率+4K画质(番剧和影视除外)
 
 http:
+  mitm:
+    - "app.bilibili.com"
+
   script:
     - match: ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?
       name: BiliBili
       type: response
       require-body: true
       timeout: 30
-      max-size: 3145728
-  mitm:
-    - "app.bilibili.com"
+      max-size: 0
 
 script-providers:
   BiliBili:
