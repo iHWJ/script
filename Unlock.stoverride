@@ -36,7 +36,7 @@ http:
       max-size: 0
 
     # 谜底时钟
-    - match: ^https?:\/\/buy\.itunes\.apple\.com\/\w{13}$
+#    - match: ^https?:\/\/buy\.itunes\.apple\.com\/\w{13}$
       name: MidiClock
       type: response
       require-body: true
