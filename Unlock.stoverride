@@ -1,5 +1,5 @@
 name: VIP Unlock Collection
-desc: 美图秀秀、AdGuard、谜底时钟、Picsew、扫描全能王、蛋波、XMind、百度网盘、酷我音乐、Grow
+desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、XMind、百度网盘、酷我音乐、Grow
 
 http:
 
@@ -34,14 +34,6 @@ http:
       require-body: true
       timeout: 30
       max-size: 0
-
-    # 谜底时钟
-#    - match: ^https?:\/\/buy\.itunes\.apple\.com\/\w{13}$
-#      name: MidiClock
-#      type: response
-#      require-body: true
-#      timeout: 30
-#      max-size: 0
 
     # Picsew
     - match: ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
@@ -109,10 +101,6 @@ script-providers:
   AdGuard:
     url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/AdGuardProCrack.js
     interval: 86400
-
-#  MidiClock:
-#    url: https://raw.githubusercontent.com/ddgksf2013/MoYu/master/MDClockProCrack.js
-#    interval: 86400
 
   Picsew:
     url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/PicsewProCrack.js
