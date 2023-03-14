@@ -1,5 +1,5 @@
 name: StormSniffer
-desc: 
+desc: 解锁订阅
 
 http:
   script:
