@@ -4,14 +4,15 @@ desc: 去除微信公众号广告
 http:
   mitm:
     - "mp.weixin.qq.com"
+
   script:
     - match: ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad
-      name: wx
+      name: Wechat
       type: response
       require-body: true
-      timeout: 10
+      timeout: 30
+
 script-providers:
-  wx:
+  Wechat:
     url: https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
     interval: 3600
-    
