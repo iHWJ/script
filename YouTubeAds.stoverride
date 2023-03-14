@@ -4,6 +4,7 @@ desc: YouTube去广告
 http:
   rewrite:
     - ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-dict
+
   script:
     - match: ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide)
       name: youtube-proto
@@ -11,7 +12,8 @@ http:
       require-body: true
       timeout: 30
       binary-mode: true
-      max-size: 3145728
+      max-size: 0
+
   mitm:
     - "*.googlevideo.com"
     - "youtubei.googleapis.com"
