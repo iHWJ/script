@@ -1,8 +1,7 @@
 name: OffScreen
-desc: OffScreen解锁
+desc: 解锁高级会员
 
 http:
-
   script:
     # OffScreen
     - match: https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$)
