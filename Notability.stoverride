@@ -1,5 +1,5 @@
 name: Notability
-desc: Notability解锁订阅
+desc: 解锁订阅
 
 http:
   mitm:
