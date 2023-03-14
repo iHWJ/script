@@ -12,6 +12,7 @@ http:
     - "api.m.jd.com"
     - "mi.gdt.qq.com"
     - "cmsapi.dmall.com"
+
   script:
 # 嘀嗒出行
     - match: ^https?:\/\/capis(-?\w*)?\.didapinche\.com\/ad\/cx\/startup\?
