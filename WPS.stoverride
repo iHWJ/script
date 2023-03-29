@@ -1,12 +1,12 @@
 name: WPS Office
-desc: 解锁超级会员部分功能
+desc: 本地超级会员
 
 http:
   mitm:
     - "account.wps.cn"
 
   script:
-    - match: ^https?:\/\/account\.wps\.cn\/api\/users
+    - match: ^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview)
       name: WPS
       type: response
       require-body: true
@@ -14,5 +14,5 @@ http:
 
 script-providers:
   WPS:
-    url: https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
-    interval: 3600
+    url: https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
+    interval: 86400
