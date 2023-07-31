@@ -1,5 +1,5 @@
 name: VIP Unlock Collection
-desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、XMind、百度网盘、酷我音乐、Grow、WPS
+desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、XMind、百度网盘、酷我音乐、Grow、WPS、Notability
 
 http:
 
@@ -19,6 +19,7 @@ http:
     - "*.lrts.me"
     - "vas.wps.cn"
     - "*account.wps.cn"
+    - "notability.com"
 
   script:
     # 美图秀秀
@@ -101,6 +102,14 @@ http:
       timeout: 30
       max-size: 0
 
+    # Notability
+    - match: ^https?:\/\/notability\.com\/(global|subscriptions)
+      name: Notability
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 0
+
 script-providers:
 
   MeiTuXiuXiu:
@@ -141,4 +150,8 @@ script-providers:
 
   WPS:
     url: https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
+    interval: 86400
+
+  Notability:
+    url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
     interval: 86400
