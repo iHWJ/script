@@ -6,16 +6,9 @@ const $ = new Env(NAME)
 $.isRequest = () => typeof $request !== 'undefined'
 $.isResponse = () => typeof $response !== 'undefined'
 
-let arg
-if (typeof $argument != 'undefined') {
-  arg = Object.fromEntries($argument.split('&').map(item => item.split('=')))
-}
-
 let result = {}
 let body = `
 // 转换时间: ${new Date().toLocaleString('zh')}
-var setInterval = () => {}
-var clearInterval = () => {}
 var $task = {
   fetch: url => {
     return new Promise((resolve, reject) => {
@@ -86,11 +79,11 @@ var $notify = (title = '', subt = '', desc = '', opts) => {
 var _scriptSonverterDone = (val = {}) => {
   let result
   if (
-    (typeof $request !== 'undefined' &&
+    typeof $request !== 'undefined' &&
     typeof val === 'object' &&
     typeof val.status !== 'undefined' &&
     typeof val.headers !== 'undefined' &&
-    typeof val.body !== 'undefined') || ${$.lodash_get(arg, 'wrap_response') || false}
+    typeof val.body !== 'undefined'
   ) {
     result = { response: val }
   } else {
