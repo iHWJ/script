@@ -1,8 +1,7 @@
 name: Rewrite2Stash
 desc: 重写/规则转换
 
-#重写链接&"qx|sg|loon.stoverride?n=name+desc"
-#规则链接&"r_parser.list"
+#重写链接&"qx|sg|loon.stoverride"
 
 http:
   script:
@@ -30,7 +29,7 @@ http:
       timeout: 60
       max-size: 0
 
-    # Rule_parser
+    # Rule_Scrip
     - match: r_parser.list$|r_parser.list\?.*
       name: Rule
       type: request
