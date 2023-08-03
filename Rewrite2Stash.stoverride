@@ -61,21 +61,21 @@ http:
 
 script-providers:
   QuanX:
-    url: https://github.com/iHWJ/script/raw/main/js/QX-Rewrite-Parser.js
+    url: https://github.com/iHWJ/script/raw/main/js/QX_Rewrite_Parser.js
     interval: 86400
 
   Surge:
-    url: https://github.com/iHWJ/script/raw/main/js/Surge-Rewrite-Parser.js
+    url: https://github.com/iHWJ/script/raw/main/js/Surge_Rewrite_Parser.js
     interval: 86400
 
   Loon:
-    url: https://github.com/iHWJ/script/raw/main/js/Loon-Rewrite-Parser.js
+    url: https://github.com/iHWJ/script/raw/main/js/Loon_Rewrite_Parser.js
     interval: 86400
 
   Rule:
-    url: https://github.com/iHWJ/script/raw/main/js/rule-parser.js
+    url: https://github.com/iHWJ/script/raw/main/js/rule_parser.js
     interval: 86400
 
   Scrip:
-    url: https://github.com/iHWJ/script/raw/main/js/script-converter.js
+    url: https://github.com/iHWJ/script/raw/main/js/script_converter.js
     interval: 86400
