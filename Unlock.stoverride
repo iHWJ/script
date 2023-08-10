@@ -1,5 +1,5 @@
 name: VIP Unlock Collection
-desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、XMind、百度网盘、酷我音乐、Grow、WPS、Notability
+desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、XMind、百度网盘、酷我音乐、Grow、WPS、Notability、Goodnotes
 
 http:
 
@@ -20,6 +20,7 @@ http:
     - "vas.wps.cn"
     - "*account.wps.cn"
     - "notability.com"
+    - "isi.csan.goodnotes.com"
 
   script:
     # 美图秀秀
@@ -110,6 +111,19 @@ http:
       timeout: 30
       max-size: 0
 
+    # Goodnotes
+    - match: ^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+      name: Goodnotes
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+
+    - match: ^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+      name: Goodnotes
+      type: request
+      timeout: 30
+
 script-providers:
 
   MeiTuXiuXiu:
@@ -154,4 +168,8 @@ script-providers:
 
   Notability:
     url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
+    interval: 86400
+
+  Goodnotes:
+    url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/goodnotes6.js
     interval: 86400
