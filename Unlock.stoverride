@@ -4,8 +4,8 @@ desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、XMind、百�
 http:
 
   mitm:
-    - "api.xiuxiu.meitu.com"
-    - "h5.xiuxiu.meitu.com"
+    - "*.xiuxiu.meitu.com"
+    - "api.posters.meitu.com"
     - "*.adguard.org"
     - "buy.itunes.apple.com"
     - "*.intsig.net"
@@ -24,12 +24,12 @@ http:
 
   script:
     # 美图秀秀
-    - match: ^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/
+    - match: ^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home)
       name: MeiTuXiuXiu
       type: response
-      require-body: true
       timeout: 30
-      max-size: 0
+      require-body: true
+      max-size: 3145728
 
     # AdGuard
     - match: ^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt
@@ -127,7 +127,7 @@ http:
 script-providers:
 
   MeiTuXiuXiu:
-    url: https://raw.githubusercontent.com/ddgksf2013/dev/main/MeiTuXiuXiuProCrack.js
+    url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
     interval: 86400
 
   AdGuard:
