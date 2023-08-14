@@ -11,9 +11,7 @@ http:
     - "*.intsig.net"
     - "api-sub.meitu.com"
     - "api.revenuecat.com"
-    - "www.xmind.cn"
-    - "www.xmind.net"
-    - "www.xmind.app"
+    - "www.xmind.*"
     - "pan.baidu.com"
     - "*.kuwo.cn"
     - "*.lrts.me"
@@ -64,12 +62,12 @@ http:
       max-size: 0
 
     # Xmind
-    - match: https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices
+    - match: ^https?:\/\/www\.xmind\.(cn|net|app)\/.+\/devices
       name: Xmind
       type: response
-      require-body: true
       timeout: 30
-      max-size: 0
+      require-body: true
+      max-size: 3145728
 
     # 百度网盘
     - match: ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user
@@ -147,7 +145,7 @@ script-providers:
     interval: 86400
 
   Xmind:
-    url: https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Xmind/Script/Xmind.js
+    url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
     interval: 86400
 
   BaiduPan:
