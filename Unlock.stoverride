@@ -86,12 +86,12 @@ http:
       max-size: 0
 
     # Grow
-    - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$
-      name: Grow
-      type: response
-      require-body: true
-      timeout: 30
-      max-size: 0
+#    - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$
+#      name: Grow
+#      type: response
+#      require-body: true
+#      timeout: 30
+#      max-size: 0
 
     # WPS
     - match: ^https:\/\/(vas|account)\.wps\.cn\/(query\/api\/v\d\/list_purchase_info|api\/users\/\d+\/overview)
