@@ -1,5 +1,5 @@
 name: VIP Unlock Collection
-desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、XMind、百度网盘、酷我音乐、Grow、WPS、Notability、Goodnotes
+desc: 美图秀秀、AdGuard、Picsew、扫描全能王、蛋波、XMind、百度网盘、酷我音乐、Grow、WPS、Notability、Goodnotes、Paper
 
 http:
 
@@ -122,6 +122,19 @@ http:
       type: request
       timeout: 30
 
+    # Paper
+    - match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+      name: Paper
+      type: response
+      timeout: 30
+      require-body: true
+      max-size: 3145728
+
+    - match: ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$)
+      name: Paper
+      type: request
+      timeout: 30
+
 script-providers:
 
   MeiTuXiuXiu:
@@ -170,4 +183,8 @@ script-providers:
 
   Goodnotes:
     url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/goodnotes6.js
+    interval: 86400
+
+  Paper:
+    url: https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/paper.js
     interval: 86400
