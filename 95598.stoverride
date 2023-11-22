@@ -1,6 +1,14 @@
 name: 网上国网
 desc: 查询电费
 
+tiles:
+  - name: 95598
+    interval: 600
+    title: '网上国网'
+    content: 'This is Super Cool'
+    icon: 'theatermasks.circle.fill'
+    backgroundColor: '#663399'
+
 cron:
   script:
     - name: 95598
