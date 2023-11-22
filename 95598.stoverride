@@ -1,0 +1,11 @@
+cron:
+  script:
+    - name: 95598
+      cron: '*/1 * * * *'
+      argument: '{ "key": true }'
+      timeout: 10
+
+script-providers:
+  95598:
+    url: https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js
+    interval: 86400
