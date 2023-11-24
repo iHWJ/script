@@ -1,0 +1,17 @@
+name: TestFlight账户管理
+desc: 自动存储/合并多个TestFlight账户列表, 并可分享/导出TestFlight APP
+
+http:
+  mitm:
+    - "testflight.apple.com"
+  script:
+    - match: ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/
+      name: TestFlightAccount
+      type: request
+      require-body: true
+      timeout: 10
+      
+script-providers:
+  TestFlightAccount:
+    url: https://github.com/NobyDa/Script/raw/ae4c12f23de8078e02c373c9969b19af28257fcb/TestFlight/TestFlightAccount.js
+    interval: 86400
