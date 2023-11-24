@@ -6,12 +6,12 @@ http:
     - "testflight.apple.com"
   script:
     - match: ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/
-      name: TestFlightAccount
+      name: TestFlight
       type: request
       require-body: true
       timeout: 10
       
 script-providers:
-  TestFlightAccount:
-    url: https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
+  TestFlight:
+    url: https://github.com/NobyDa/Script/raw/master/TestFlight/TestFlightAccount.js
     interval: 86400
