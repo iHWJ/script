@@ -1,5 +1,5 @@
 name: TestFlight账户管理
-desc: 自动存储/合并多个TestFlight账户列表, 并可分享/导出TestFlight APP
+desc: 自动存储/合并多个TestFlight账户列表, 并可导出/分享TestFlight APP.⚠️该脚本已经与"TF区域限制解除脚本"合并，如需使用该脚本请务必禁用它，否则可能出现APP安装异常
 
 http:
   mitm:
@@ -13,5 +13,5 @@ http:
       
 script-providers:
   TestFlightAccount:
-    url: https://github.com/NobyDa/Script/raw/ae4c12f23de8078e02c373c9969b19af28257fcb/TestFlight/TestFlightAccount.js
+    url: https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
     interval: 86400
