@@ -1,0 +1,21 @@
+name: BaiMiao
+desc: Gold VIP
+
+http:
+  mitm:
+    - "baimiao.uzero.cn"
+
+  script:
+    - match: ^https?:\/\/baimiao\.uzero\.cn\/api\/v2\.user\/appLaunchWithUser
+      name: BaiMiao
+      type: response
+      require-body: true
+      timeout: 30
+
+  rewrite:
+    ^https?:\/\/baimiao\.uzero\.cn\/api\/v2\.user\/c(heckLoginClient|leanAccount) - reject
+
+script-providers:
+  PSExpress:
+    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/BaiMiaoGoldVipCrack.js
+    interval: 86400
