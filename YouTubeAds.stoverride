@@ -1,5 +1,5 @@
-name: YouTubeAds
-desc: YouTube (Music) Enhance
+name: "YouTubeAds"
+desc: "YouTube (Music) Enhance"
 
 http:
   mitm:
@@ -11,24 +11,24 @@ http:
       ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad - reject-200
 
   script:
-    - match: ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\?
-      name: youtube.request
+    - match: ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)
+      name: "youtube.request"
       type: request
       require-body: true
       max-size: -1
       binary-mode: true
 
-    - match: ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?
-      name: youtube.response
+    - match: ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)
+      name: "youtube.response"
       type: response
       require-body: true
       max-size: -1
       binary-mode: true
 
 script-providers:
-  youtube.request:
+  "youtube.request":
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.beta.js
     interval: 86400
-  youtube.response:
+  "youtube.response":
     url: https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.beta.js
     interval: 86400
