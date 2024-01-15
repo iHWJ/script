@@ -12,8 +12,8 @@ http:
       require-body: true
       timeout: 30
 
-  rewrite:
-    ^https?:\/\/baimiao\.uzero\.cn\/api\/v2\.user\/c(heckLoginClient|leanAccount) - reject
+  url-rewrite:
+    - ^https?:\/\/baimiao\.uzero\.cn\/api\/v2\.user\/c(heckLoginClient|leanAccount) - reject-array
 
 script-providers:
   PSExpress:
