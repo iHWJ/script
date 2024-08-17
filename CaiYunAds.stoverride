@@ -1,0 +1,102 @@
+name: CaiYunAds
+desc: CaiYunAds
+
+http:
+
+  mitm:
+    - "wrapper.cyapi.cn"
+    - "api.caiyunapp.com"
+    - "starplucker.cyapi.cn"
+    - "ad.cyapi.cn"
+    - "biz.cyapi.cn"
+
+  url-rewrite:
+# > 通用广告请求
+    - >-
+      ^https?:\/\/ad\.cyapi\.cn\/v\d - reject-200
+
+  script:
+# > 伪装VIP解锁48小时降水[需登录]
+    - match: ^https?:\/\/biz\.cyapi\.cn\/v\d\/user
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# > 图层推广
+    - match: ^https?:\/\/wrapper\.cyapi\.cn\/v\d\/activity
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# > 活动推广
+    - match: ^https?:\/\/api\.caiyunapp\.com\/v\d\/activity
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# > 首页顶部推广
+    - match: ^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/homefeatures
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# > SVIP提醒推广
+    - match: ^https?:\/\/starplucker\.cyapi\.cn\/v\d/notification/message_center
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# > 雨季特惠提醒
+    - match: ^https?:\/\/starplucker\.cyapi\.cn\/v\d/config/cypage
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# > 发现页信息流推荐
+    - match: ^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/feeds
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# > 发现页banners
+    - match: ^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/banners
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# > 发现页中间部分
+    - match: ^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/features
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+# > 发现页活动
+    - match: ^https?:\/\/starplucker\.cyapi\.cn\/v\d/campaigns
+      name: "caiyun_json"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+script-providers:
+  "caiyun_json":
+    url: https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+    interval: 86400
