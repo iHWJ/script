@@ -1,7 +1,3 @@
-#!desc=喜马拉雅去广告
-#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/xmlyad.png
-#!homepage=https://whatshub.top
-#!author=ddgksf2013
 name: ximalaya
 desc: 喜马拉雅去广告
 http:
@@ -10,17 +6,17 @@ http:
     - "*.xmcdn.*"
   script:
     - match: ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix
-      name: ximalayaquguanggao1
+      name: ximalaya1
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category
-      name: ximalayaquguanggao2
+      name: ximalaya2
       type: response
       require-body: true
       timeout: 10
     - match: ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage
-      name: ximalayaquguanggao3
+      name: ximalaya3
       type: response
       require-body: true
       timeout: 10
@@ -43,12 +39,12 @@ http:
     - ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
     - ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
 script-providers:
-  ximalayaquguanggao1:
+  ximalaya1:
     url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/xmly_json.js
     interval: 86400
-  ximalayaquguanggao2:
+  ximalaya2:
     url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/xmly_json.js
     interval: 86400
-  ximalayaquguanggao3:
+  ximalaya3:
     url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/xmly_json.js
     interval: 86400
