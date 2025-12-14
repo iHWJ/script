@@ -1,5 +1,6 @@
 name: Ximalaya
 desc: 喜马拉雅去广告
+icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Ximalaya.png
 http:
   mitm:
     - "*.xima*.*"
