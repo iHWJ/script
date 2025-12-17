@@ -40,6 +40,6 @@ http:
     - ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
     - ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
 script-providers:
-  Ximalaya1:
+  Ximalaya:
     url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/xmly_json.js
     interval: 86400
