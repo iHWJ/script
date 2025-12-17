@@ -1,5 +1,6 @@
 name: 扫描全能王
-desc: 解锁扫描全能王会员
+desc: 解锁扫描全能王黄金会员
+icon: https://raw.githubusercontent.com/stevendolike/xrayvless/refs/heads/main/Loon/icon/camscanner.png
 
 http:
   mitm:
