@@ -1,11 +1,10 @@
 name: AdGuard
 desc: AdGuard Premium
-icon: "https://raw.githubusercontent.com/fishdown/Icon/master/app/adguard.png"
+icon: https://raw.githubusercontent.com/fishdown/Icon/master/app/adguard.png
 
 http:
   mitm:
     - "*.adguard.org"
-
   script:
     - match: ^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt
       name: AdGuard
