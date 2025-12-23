@@ -5,7 +5,6 @@ icon: https://raw.githubusercontent.com/stevendolike/xrayvless/refs/heads/main/L
 http:
   mitm:
     - "*.intsig.net"
-
   script:
     - match: ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?
       name: CamScanner
