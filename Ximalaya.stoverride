@@ -1,6 +1,7 @@
 name: 喜马拉雅
-desc: 喜马拉雅去广告
+desc: Ximalaya Ad Filtering
 icon: https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Ximalaya.png
+
 http:
   mitm:
     - "*.xima*.*"
@@ -39,6 +40,7 @@ http:
     - ^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime - reject
     - ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
     - ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
+
 script-providers:
   Ximalaya:
     url: https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Script/xmly_json.js
