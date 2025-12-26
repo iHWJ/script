@@ -1,5 +1,6 @@
 name: 酷我音乐
 desc: KuWoMusic VIP
+icon: https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Kuwo.png
 
 http:
   mitm:
@@ -83,7 +84,32 @@ http:
       timeout: 60
       max-size: -1
 
+    # 会员
+    - match: http://vip1.kuwo.cn/vip/v2/user/vip
+      name: KuWoMusic2
+      type: response
+      require-body: true
+      timeout: 60
+      max-size: -1
+    # 下载
+    - match: ^http?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver=3
+      name: KuWoMusic2
+      type: response
+      require-body: true
+      timeout: 60
+      max-size: -1
+    # 播放
+    - match: ^http?:\/\/nmobi\.kuwo\.cn\/mobi\.s\?f=kuwo&q=
+      name: KuWoMusic2
+      type: request
+      require-body: true
+      timeout: 60
+      max-size: -1
+
 script-providers:
   KuWoMusic:
     url: https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js
+    interval: 86400
+  KuWoMusic2:
+    url: https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/kwcjb.js
     interval: 86400
