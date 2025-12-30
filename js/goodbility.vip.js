@@ -2,6 +2,7 @@
 
 解锁GoodNotes、Notability内购会员 
 
+https://t.me/ddgksf2021
 
 [Script]
 
