@@ -1,0 +1,36 @@
+name: goodbility
+desc: goodbility
+icon: https://raw.githubusercontent.com/InnFen/Loonforown/main/Icon/Goodnotes.png
+
+http:
+  mitm:
+    - "isi.csan.*"
+    - "notability.com"
+
+  script:
+    - match: ^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers\/[^/]+$)
+      name: "goodbility"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts|subscribers)
+      name: "deleteHeader"
+      type: request
+      timeout: 60
+
+    - match: ^https?:\/\/notability\.com\/global
+      name: "goodbility"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+script-providers:
+  "goodbility":
+    url: https://github.com/iHWJ/script/raw/refs/heads/main/js/goodbility.vip.js
+    interval: 86400
+  "deleteHeader":
+    url: https://github.com/iHWJ/script/raw/refs/heads/main/js/deleteHeader.js
+    interval: 86400
