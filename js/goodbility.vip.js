@@ -2,12 +2,13 @@
 
 解锁GoodNotes、Notability内购会员 
 
+https://t.me/ddgksf2021
 
 [Script]
 
-^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers\/[^/]+$) url script-response-body https://github.com/iHWJ/script/raw/refs/heads/main/js/goodbility.vip.js
-^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts|subscribers) url script-request-header https://github.com/iHWJ/script/raw/refs/heads/main/js/deleteHeader.js
-^https?:\/\/notability\.com\/global url script-response-body https://github.com/iHWJ/script/raw/refs/heads/main/js/goodbility.vip.js
+^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts$|subscribers\/[^/]+$) url script-response-body https://ddgksf2013.top/scripts/goodbility.vip.js
+^https:\/\/isi\.csan.[a-z.]+\/.+\/(receipts|subscribers) url script-request-header https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js
+^https?:\/\/notability\.com\/global url script-response-body https://ddgksf2013.top/scripts/goodbility.vip.js
 
 [mitm]
 
