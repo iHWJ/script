@@ -4,11 +4,11 @@ icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Neteas
 # 显示条目数量songCount=，默认展示前8条
 
 tiles:
-  - name: wangyiyunregebang
+  - name: '热歌榜'
     icon: 'headphones'
     backgroundColor: '#e20000'
     argument: 'songCount='
 
 script-providers:
-  wangyiyunregebang:
+  '热歌榜':
     url: https://github.com/iHWJ/script/raw/refs/heads/main/js/nm.js
