@@ -18,7 +18,7 @@ $httpClient.get({ url: url, headers: headers }, function(error, response, body) 
     let panelContent = '';
     for (let i = 0; i < songList.length && i < songCount; i++) {
       const { name, artist } = songList[i];
-      panelContent += `${i + 1}.${name}🎧${artist}\n`;
+      panelContent += `${i + 1}.${name}-${artist}\n`;
     }
 
     const panel = {
