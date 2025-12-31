@@ -3,10 +3,10 @@ desc: 汇率面板
 icon: 
 
 tiles:
-  - name: dangqianhuilv
+  - name: '实时汇率'
     icon: 'yensign.circle'
     backgroundColor: '#D4AF37'
 
 script-providers:
-  dangqianhuilv:
+  '实时汇率':
     url: https://github.com/iHWJ/script/raw/refs/heads/main/js/rates.js
