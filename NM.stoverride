@@ -1,6 +1,6 @@
 ﻿name: 网易云热歌榜
 desc: Music Toplist
-icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Music_Enhance.png
+icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
 # 显示条目数量songCount=，默认展示前8条
 
 tiles:
