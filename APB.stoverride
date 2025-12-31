@@ -1,22 +1,7 @@
-#SUBSCRIBED http://script.hub/file/_start_/https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule/_end_/%25E5%25B9%25BF%25E5%2591%258A%25E5%25B9%25B3%25E5%258F%25B0%25E6%258B%25A6%25E6%2588%25AA%25E5%2599%25A8.stoverride?type=surge-module&target=stash-stoverride&del=true&jqEnabled=true
-name: |-
-  广告平台拦截器
-desc: |-
-  此插件是所有去广告插件的基础，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\n\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine等广告平台的广告请求，更适合iOS平台的应用。
-author: |-
-  可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-icon: |-
-  https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
-category: |-
-  BetaModule
-tag: |-
-  去广告, 依赖
-loon_version: |-
-  3.2.4(787)
-homepage: |-
-  https://hub.kelee.one
-date: |-
-  2025-12-19 23:34:15
+name: Ad Platform Blocker
+desc: 广告平台拦截
+icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Advertising.png
+# 此插件是所有去广告插件的基础，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\n\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine等广告平台的广告请求，更适合iOS平台的应用。
 
 rules:
   - AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching)))),DIRECT
@@ -319,12 +304,10 @@ rules:
   - DOMAIN-SUFFIX,rixengine.com,REJECT
 
 http:
-
   mitm:
     - "video-dsp.pddpic.com"
     - "t-dsp.pinduoduo.com"
     - "images.pinduoduo.com"
-
   url-rewrite:
     - >-
       ^http:\/\/.+\/amdc\/mobileDispatch - reject
@@ -338,4 +321,3 @@ http:
       ^https:\/\/images\.pinduoduo\.com\/mrk\/ - reject
     - >-
       ^https:\/\/images\.pinduoduo\.com\/marketing_api\/ - reject
-
