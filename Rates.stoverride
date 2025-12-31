@@ -1,6 +1,6 @@
 name: 当前汇率
 desc: 汇率面板
-icon: 
+icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Cryptocurrency_3.png
 
 tiles:
   - name: '实时汇率'
