@@ -1,8 +1,5 @@
 name: 酷我音乐
 desc: 去广告/会员功能研究
-open_url: https://github.com/iHWJ/script
-author: iHWJ
-homepage: https://github.com/iHWJ/script
 icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Kuwo.png
 
 http:
