@@ -1,0 +1,29 @@
+name: 酷我音乐
+desc: 去广告/会员功能研究
+open_url: https://github.com/iHWJ/script
+author: iHWJ
+homepage: https://github.com/iHWJ/script
+icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Kuwo.png
+
+http:
+  rewrite:
+    - >-
+      ^https?:\/\/.*\.kuwo\.cn\/.*
+      script-response-body
+      https://raw.githubusercontent.com/iHWJ/script/main/js/kuwo.js
+
+script:
+  - match: ^https?:\/\/.*\.kuwo\.cn\/.*
+    name: 酷我音乐
+    type: response
+    require-body: true
+    max-size: 0
+    binary-mode: false
+    timeout: 60
+    engine: javascript
+    debug: false
+    url: https://raw.githubusercontent.com/iHWJ/script/main/js/kuwo.js
+
+mitm:
+  - kuwo.cn
+  - *.kuwo.cn
