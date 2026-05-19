@@ -1,26 +1,143 @@
-name: 酷我音乐
-desc: 去广告/会员功能研究
-icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Kuwo.png
+#SUBSCRIBED http://script.hub/file/_start_/https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.sgmodule/_end_/kuwo.stoverride?type=qx-rewrite&target=stash-stoverride&del=true&jqEnabled=true
+name: |-
+  酷我音乐
+desc: |-
+  解锁会员权限、支持切换音质【最高无损】
+author: |-
+  𝐎𝐍𝐙𝟑𝐕
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1077.png
+category: |-
+  𝐎𝐍𝐙𝟑𝐕
+tag: |-
+  𝐎𝐍𝐙𝟑𝐕
+homepage: |-
+  https://t.me/onz3v_channel
+openUrl: |-
+  https://t.me/onz3v_channel
+feedback: |-
+  https://t.me/onz3v_group
+version: |-
+  3.0.0
+date: |-
+  2026-05-11
 
 http:
-  rewrite:
+
+  mitm:
+    - "*.kuwo.cn"
+    - "ad.tencentmusic.com"
+    - "abt-kuwo.tencentmusic.com"
+
+  url-rewrite:
     - >-
-      ^https?:\/\/.*\.kuwo\.cn\/.*
-      script-response-body
-      https://raw.githubusercontent.com/iHWJ/script/main/js/kuwo.js
+      ^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/(getIOSIsHideAd|getMotor)\.do - reject-dict
+    - >-
+      ^https?:\/\/rich\.kuwo\.cn\/(AdService|ecom)\/kaiping\/ad[iI]nfo - reject-dict
+    - >-
+      ^https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/adVip\/info - reject-dict
+    - >-
+      ^https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/operate(\/(adVip|freeMode\/h5))?\/text - reject-dict
+    - >-
+      ^https?:\/\/ad\.tencentmusic\.com\/config\/uni - reject-200
+    - >-
+      ^https?:\/\abt-kuwo\.tencentmusic\.com\/kuwo\/ui\/info - reject-dict
 
-script:
-  - match: ^https?:\/\/.*\.kuwo\.cn\/.*
-    name: 酷我音乐
-    type: response
-    require-body: true
-    max-size: 0
-    binary-mode: false
-    timeout: 60
-    engine: javascript
-    debug: false
-    url: https://raw.githubusercontent.com/iHWJ/script/main/js/kuwo.js
+  script:
+    - match: ^https?:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
 
-mitm:
-  - kuwo.cn
-  - *.kuwo.cn
+    - match: ^https?:\/\/music(pay)?\.kuwo\.cn\/music.pay\?newver=3
+      name: "酷我修改会员信息_18"
+      type: request
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/.+\.kuwo\.cn\/mobi\.s\?f=kwxs&q=
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/tingshu\.kuwo\.cn\/api\/v2\/pay\/app\/getConfigInfo
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/payInfo\/kwplayer\/payMiniBar
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?simpleToken=1
+      name: "酷我修改会员信息_18"
+      type: request
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?newver=3
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/vip1\.kuwo\.cn\/(commercia\/)?vip\/(v2\/theme\?op\=gd|(player\/getStyleListByModel|hanger\/wear))
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/vip1\.kuwo\.cn\/commercia\/vip\/dressCenter\/getTabList
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/vip1\.kuwo\.cn\/commercia\/vipTab\/myTab\/base
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/vip1\.kuwo\.cn\/commercia\/userAssets\/downloadCoupon\/reduce
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+    - match: ^https?:\/\/homepages\.kuwo\.cn(\.eo\.dnse1\.com)?\/mgxh\.s
+      name: "酷我修改会员信息_18"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 60
+
+script-providers:
+  "酷我修改会员信息_18":
+    url: https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js
+    interval: 86400
+
+
