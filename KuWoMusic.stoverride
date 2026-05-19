@@ -1,8 +1,8 @@
-name:  酷我音乐
-desc:  解锁会员权限、支持切换音质最高无损
-icon:  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1077.png
-version:  3.0.0
-date:  2026-05-11
+name: 酷我音乐
+desc: 解锁会员权限、支持切换音质最高无损
+icon: https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1077.png
+version: 3.0.0
+date: 2026-05-11
 
 http:
 
